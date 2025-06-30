@@ -92,6 +92,10 @@ const restartButton = document.getElementById('restart-button');
 canvas.width = 800;
 canvas.height = 600;
 
+// キャンバスサイズの設定
+canvas.width = 800;
+canvas.height = 600;
+
 // イベントリスナーの設定
 function setupEventListeners() {
     // キー入力イベント

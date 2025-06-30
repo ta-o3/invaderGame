@@ -12,26 +12,54 @@
             align-items: center;
             min-height: 100vh;
             background-color: #000;
+            color: #fff;
         }
         canvas {
             border: 2px solid #fff;
+            margin: 20px;
         }
         #score {
             position: absolute;
             top: 20px;
             left: 20px;
-            color: #fff;
             font-size: 24px;
             font-family: Arial, sans-serif;
+        }
+        #game-over {
+            display: none;
+            text-align: center;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: rgba(0, 0, 0, 0.8);
+            padding: 20px;
+            border-radius: 10px;
+        }
+        #game-over h1 {
+            margin: 10px 0;
+        }
+        #restart-button {
+            padding: 10px 20px;
+            font-size: 20px;
+            cursor: pointer;
+            background: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            margin-top: 10px;
+        }
+        #restart-button:hover {
+            background: #45a049;
         }
     </style>
 </head>
 <body>
     <div id="score">Score: 0</div>
-    <div id="game-over" style="display: none; text-align: center; color: #fff;">
+    <div id="game-over">
         <h1>Game Over!</h1>
         <p>Final Score: <span id="final-score">0</span></p>
-        <button id="restart-button" style="padding: 10px 20px; font-size: 20px; cursor: pointer;">Restart</button>
+        <button id="restart-button">Restart</button>
     </div>
     <canvas id="gameCanvas"></canvas>
     <script src="game.js"></script>
